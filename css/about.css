@@ -1,0 +1,184 @@
+a.download-btn {
+    font-size: 1.4rem;
+
+    background-color: var(--mint-100);
+    color: white;
+    padding: 1rem;
+
+    border-radius: 0.8rem;
+}
+
+a.download-btn:hover {
+    background-color: var(--mint-300);
+}
+
+/* main */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+}
+
+main article {
+    margin-left: 3vw;
+}
+
+main article h1 {
+    font-size: 2.7rem;
+    color: var(--gray-green-300);
+    text-indent: 1.5rem;
+
+    border-bottom: 2px solid var(--gray-green-300);
+
+    width: 85vw;
+}
+/* ~ */
+
+/* intro */
+#intro {
+    font-size: 1.5rem;
+
+    display: flex;
+    align-items: center;  /* start */
+    justify-content: left;
+    justify-items: center;
+    gap: 2vmax;
+
+    padding: 1rem 4rem;
+    overflow: hidden;
+}
+
+#intro p {
+    max-width: 50vw;
+    flex-shrink: 2;
+    text-indent: 3rem;    
+    text-align: justify;
+}
+
+#intro a.download-btn {
+    white-space: nowrap;
+}
+/* ~ */
+
+/* work exp */
+.timeline {
+    --timeline-color: var(--white-500);
+
+    flex-grow: 1;
+    max-width: 70vw;
+    padding: 6rem;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 0.5rem;
+    top: 0;
+    bottom: 0;
+    left: 3rem;
+
+    background-color: var(--timeline-color);
+    background: linear-gradient(180deg, transparent 5%, var(--timeline-color) 20%, var(--timeline-color) 80%, transparent 95%);
+}
+
+.timeline-container {
+    background-color: var(--white-100);
+    color: var(--black-100);
+    font-size: 1.3rem;
+
+    margin: 1rem 0;
+    padding: 1rem;
+
+    border-radius: 0.5rem;
+
+    position: relative;
+}
+
+.timeline-container span {
+    float: right;
+    font-size: 0.9em;
+    color: var(--white-400);
+    font-style: italic;
+
+    margin-left: 1em;
+}
+
+.timeline-container h2 {
+    color: var(--mint-200);
+    font-size: 2rem;
+
+    margin-bottom: 0.5rem;
+}
+
+.timeline-container h4 {
+    font-style: italic;
+    font-size: 1.4rem;
+    opacity: 0.85;
+
+    margin-bottom: 0.5rem;
+}
+
+.timeline-container .content {
+    margin-left: 1.8rem;
+}
+
+.timeline-container::before {
+    content: '';
+
+    background-color: var(--timeline-color);
+
+    width: 1rem;
+    height: 1rem;
+
+    top: 50%;
+    left: -3.25rem;
+
+    transform: rotate(45deg);
+
+    position: absolute;
+
+}
+/* ~ */
+
+/* skills */
+#skills {
+    font-size: 1.5rem;
+
+    margin-bottom: 2rem;
+}
+
+#skills .container {
+    padding: 2rem 4rem;
+    padding-left: 5rem;
+}
+/* ~ */
+
+/* for mobile */
+@media screen and (max-width: 750px) {
+    #intro {
+        flex-direction: column;
+        padding-left: 0;
+    }
+
+    #intro p {
+        max-width: 80vw;
+    }
+    
+    .timeline {
+        max-width: 100%;
+        padding-inline: 4.5rem;
+    }
+
+    .timeline::before{
+        left: 1.5rem;
+        background: linear-gradient(180deg, transparent 5%, var(--timeline-color) 10%, var(--timeline-color) 90%, transparent 95%);
+    }
+}
+/* ~ */

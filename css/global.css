@@ -1,0 +1,338 @@
+/*
+ white   greyn   minty   grey    black
+#D8DEF2 #6A8F8E #22AAA1 #262C36 #11151C
+*/
+
+:root {
+    --white-100: #d9dff2;
+    --white-200: #BCC1D3;
+    --white-300: #9FA4B3;
+    --white-400: #838793;
+    --white-500: #666973;
+
+    --gray-green-100: #6A8F8E;
+    --gray-green-200: #5F8180;
+    --gray-green-300: #4E6A69;
+
+    --mint-100: #22AAA1;
+    --mint-200: #1E9991;
+    --mint-300: #1b8881;
+
+    --gray-100: #262c36;
+    --gray-200: #222730;
+    --gray-300: #191D24;
+    --gray-400: #111318;
+
+    --black-100: #11151c;
+    --black-200: #080A0D;
+
+    --transparent-black: #11151cd9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition-duration: 0.3s;
+    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+body {
+    background-image: url("../img/background.png");
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color:inherit;
+}
+
+a.visible-link {
+    text-decoration: underline;
+    color: var(--mint-100);
+}
+
+a.visible-link:visited {
+    color: var(--gray-green-100);
+}
+
+a.visible-link:active {
+    color: #AA222B;
+}
+
+.material-symbols-rounded {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    vertical-align: bottom;
+}
+
+
+/* navigation */
+nav {
+    --nav-min-height: 4rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 15%;
+
+    width: 100%;
+    min-height: var(--nav-min-height);
+
+    background-color: var(--black-100);
+    color:white;
+
+    font-size: 1.5rem;
+
+    margin-top: 20vh;
+    padding-left: 20vw;
+}
+
+nav #nav-menu-btn { /* by default is hidden */
+    display: none;
+
+    width: var(--nav-min-height);
+    height: var(--nav-min-height);
+}
+
+nav ul {
+    list-style-type: none;
+    color: inherit;
+}
+
+nav ul li {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+
+nav ul li a {
+    display: inline-block;
+    padding: 1rem;
+    height: 100%;
+    
+}
+
+a#here {
+    background-color: var(--gray-green-100);
+}
+
+nav ul li a:not(#here):hover {
+    background-color: var(--mint-100);
+}
+
+nav #settings-btn {
+    display: block;
+    height: var(--nav-min-height);
+    width: var(--nav-min-height);
+}
+
+nav button {
+    vertical-align: middle;
+    font-size: 3rem;
+    border: 0.2rem solid var(--black-100);
+    border-style: solid;
+    background-color: transparent;
+    color: var(--white-100);
+}
+
+nav button:hover {
+    cursor: pointer;
+    color: white;
+    font-size: 3.2rem;
+
+    background-color: var(--gray-100);
+}
+
+.menu-container {
+    display: none; /* default value */
+
+    background-color: var(--transparent-black);
+
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    z-index: 100;
+}
+
+.menu-container aside.side-nav {
+    background-color: var(--gray-100);
+    color: white;
+    width: 60%;
+    height: 100%;
+
+    padding-top: 3rem;
+
+    display: inline-block;
+}
+
+.menu-container aside.side-nav.opening {
+    animation-name: openMenu;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+}
+
+.menu-container aside.side-nav.closing {
+    animation-name: closeMenu;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+}
+
+@keyframes openMenu {
+    0% {width: 0;}
+    1% {width: 0;}
+    100% {width: 60%;}
+}
+
+@keyframes closeMenu {
+    from {width: 60%;}
+    to {width: 0;}
+}
+
+.menu-container.fade-in {
+    animation-name: fade-in-menu;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+}
+
+.menu-container.fade-out {
+    animation-name: fade-out-menu;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+}
+
+
+@keyframes fade-in-menu {
+    0% { background-color: transparent; }
+    100% { background-color: var(--transparent-black); }
+}
+
+@keyframes fade-out-menu {
+    0% { background-color: var(--transparent-black); }
+    100% { background-color: transparent; }
+}
+
+.menu-container .close-btn {
+    font-size: 3rem;
+    color: var(--white-500);
+    font-weight: bolder;
+
+    background-color: transparent;
+    border: none;
+
+    position: absolute;
+    top: 3rem;
+    padding-left: 1rem;
+}
+
+.menu-container .side-nav ul {
+    display: block;
+    width: 100%;
+    list-style-type: none;
+
+    overflow-y: hidden;
+}
+
+.menu-container .side-nav ul li a {
+    display: inline-block;
+    width: 100%;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+
+    text-wrap: nowrap;
+    overflow: hidden;
+}
+
+
+.menu-container .side-nav ul li a:not(#here):hover {
+    background-color: var(--mint-100);
+}
+/* ~ */
+
+/* main */
+main {
+    font-size: 1rem;
+
+    background-color: white;
+
+    min-height: calc(100vh - 20vh - 9vh - 4rem);
+
+    padding: 4rem 0;
+}
+/* ~ */
+
+/* footer */
+footer {
+    background-color: var(--gray-100);
+    color: var(--white-500);
+    min-height: 9vh;
+
+    padding: 1rem 2rem;
+    line-height: 2rem;
+
+    text-align: right;
+    font-size: 0.9rem;
+}
+/* ~ */
+
+/* scrollbar */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--gray-300); 
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--mint-100);
+    border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--mint-200);
+}
+/* ~ */
+
+/* text selection */
+::selection {
+    background-color: var(--mint-100);
+    color: white;
+}
+
+::-moz-selection { /* for firefox */
+    background-color: var(--mint-100);
+    color: white;
+}
+/* ~ */
+
+/* for mobile */
+@media screen and (max-width: 750px) {
+    nav{
+        padding-left: 10vw;
+    }
+
+    nav #nav-menu-btn { 
+        display: initial;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    main {
+        flex-direction: column;
+    }
+}
+/* ~ */

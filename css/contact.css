@@ -1,0 +1,172 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+main>* {
+    width: 50%;
+}
+
+#contact-info {
+    display: flex;
+    justify-content: space-around;
+}
+
+#contact-info a {
+    width:min-content;
+}
+
+#contact-info a.fa:hover {
+    color: var(--mint-100);
+    scale: 1.25;
+}
+
+/* form style */
+main form {
+    background-color: var(--white-100);
+    font-size: 1rem;
+
+    padding: 3em 0;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+
+    border-radius: 1rem;
+}
+
+main form>* {
+    width: 70%;
+}
+
+main form fieldset input[type="text"], main form textarea {
+    border: none;
+}
+
+main form *:focus {
+    outline: none;
+    background-color: #F1F1F1;
+}
+
+main form fieldset {
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    column-gap: 0.7em;
+
+    border: none;
+}
+
+main form fieldset>input {
+    flex-grow: 1;
+    min-width: 3rem;
+}
+
+main form textarea {
+    width: 50%;
+    resize: none;
+    
+}
+
+main form h2 {
+    color: var(--gray-green-300);
+    font-size: 2.5em;
+    text-align: center;
+    flex: 2 100%;
+
+    padding-bottom: 1rem;
+}
+
+main form input[type="submit"] {
+    flex-grow: 0;
+    width: fit-content;
+
+    color: white;
+    font-size: 1.3em;
+
+    padding: 0.5em 1.5em;
+
+    background-color: var(--mint-200);
+    border: none;
+    border-radius: 0.3rem;
+}
+
+main form input[type="submit"]:hover {
+    scale: 1.1;
+
+    cursor: pointer;
+
+    background-color: var(--mint-300);
+}
+
+main form fieldset *, main form textarea{
+    padding: 0.5em;
+    font-size: 1.2rem;
+}
+/* ~ */
+
+/* popup */
+#popup {
+    position: fixed;
+    bottom: 0;
+    right: 1%;
+
+    margin: 0.5rem;
+    padding: 1rem 1.5rem;
+
+    background-color: var(--gray-green-100);
+    color: white;
+
+    font-size: 1.3rem;
+
+    opacity: 0;
+}
+
+#popup.show {
+    animation-name: go-up;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes go-up {
+    0% { bottom: -10vh; opacity: 1;}
+    20% { bottom: 0; }
+    80% { opacity: 1; }
+    100% { opacity: 0;}
+}
+/* ~ */
+
+/* for mobile */
+@media screen and (max-width: 750px) {
+    main>* {
+        width: 100vw;
+    }
+
+    main form {
+        font-size: 1.3rem;
+        overflow-x: hidden ;
+    }
+
+    main form h2 {
+        font-size: 2em;
+    }
+
+    main form fieldset {
+        font-size: 0.9em;
+        /* width: 60%; */
+    }
+
+    /* main form fieldset input {
+        flex-grow: 1;
+        min-width: 3rem;
+    } */
+
+    main form textarea {
+        width: 70%;
+    }
+}

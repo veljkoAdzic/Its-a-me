@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакт | Вељко Аџиќ</title>
+    <link rel="shortcut icon" href="./img/icon/contact.svg" type="image/x-icon">
+
+    <script>const here = "CONTACT"; </script>
+    <script src="./js/menu.js" defer></script>
+    <script src="./js/contact.js" defer></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,300,1,200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/contact.css">
+</head>
+<body>
+    <nav>
+        <button type="button" id="nav-menu-btn" onclick="openSideNav()">
+            <span class="material-symbols-rounded">menu</span>
+        </button>
+
+        <!-- auto generated my menu.js -->
+    </nav>
+
+    <!-- side menu when in mobile view -->
+    <div class="menu-container">
+        <aside class="side-nav">
+            <!-- auto generated my menu.js -->
+        </aside>
+
+        <button type="button" class="close-btn" onclick="closeSideNav()">
+            <span class="material-symbols-rounded">arrow_back_ios</span>
+        </button>
+    </div>
+
+    <main>
+
+        <form>
+            <h2>Контактирајте ме</h2>
+            
+            <fieldset>
+            <label for="name">Име:</label>
+            <input type="text" name="name" id="name" autocomplete="off" required>
+            </fieldset>
+
+            <fieldset>
+            <label for="contact">Контакт:</label>
+            <input type="text" name="contact" id="contact" autocomplete="off" required>
+            </fieldset>
+
+            <textarea name="note" placeholder="Ваша порака..." autocomplete="off" required rows="9"></textarea>
+
+            <input type="submit">
+        </form>
+
+        <article id="contact-info">
+                <a href="mailto:veljko.adzic.004@gmail.com" class="fa fa-3x fa-envelope" aria-hidden="true"></a>
+            
+                <a href="https://github.com/veljkoAdzic" class="fa fa-3x fa-github" aria-hidden="true" target="_blank"></a>
+            
+                <a onclick="copyLink()" href="javascript:void(0)" class="fa fa-3x fa-share-alt" aria-hidden="true"></a>
+            
+                <a href="#" class="fa fa-3x fa-facebook" aria-hidden="true" target="_blank"></a>
+        </article>
+    </main>
+    
+    <footer>
+        Вељко Аџиќ 2024<br>
+        Домашна задача пo ОнВД 
+    </footer>
+</body>
+</html>

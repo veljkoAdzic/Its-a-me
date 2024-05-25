@@ -1,0 +1,80 @@
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vmax;
+}
+
+.img-card {
+    width: 30vmin;
+    min-width: 10rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 1rem;
+
+    background-color: var(--white-100);
+    color: var(--black-100);
+    border-radius: 1rem;
+}
+
+.img-card img {
+    width: 90%;
+    border-radius: 0.5rem;
+}
+
+.img-card:hover {
+    scale: 1.2;
+}
+
+.img-card figcaption {
+    font-size: 1.3em;
+    font-weight: bold;
+    padding-top: 1rem;
+}
+
+main .text {
+    width: 35%;
+}
+
+main .text h1 {
+    font-size: 4.5vmin;
+    font-weight: bold;
+    color: var(--mint-100);
+
+    margin-bottom: 1.5rem;
+}
+
+main .text p {
+    font-size: 2.5vmin;
+    text-align: justify;
+}
+
+@media screen and (max-width: 750px){
+    main .img-card {
+        width: 55vmin;
+    }
+
+    main .img-card img {
+        height: calc(55vmin - 2rem);
+        /* min-height: 25vmin; */
+        object-fit: cover;
+        object-position: 25% 25%;
+    }
+
+    main .text{
+        width: 55vw;
+    }
+
+    main .text h1 {
+        font-size: 6vmin;
+        text-align: center;
+    }
+
+    main .text p {
+        font-size: 5vmin;
+    }
+}

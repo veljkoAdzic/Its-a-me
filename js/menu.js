@@ -8,10 +8,10 @@
 */
 
 const ref = [
-    {name: "Почетна", href: "./main.html", tag: "HOME"},
-    {name: "За мене", href: "./about.html", tag: "ABOUT"},
-    {name: "Проекти", href: "./projects.html", tag: "PROJECTS"},
-    {name: "Контакт", href: "./contact.html", tag: "CONTACT"}
+    {name: "Почетна", href: "/main.html", tag: "HOME"},
+    {name: "За мене", href: "/about.html", tag: "ABOUT"},
+    {name: "Проекти", href: "/projects.html", tag: "PROJECTS"},
+    {name: "Контакт", href: "/contact.html", tag: "CONTACT"}
 ];
 
 function generateMenu(){

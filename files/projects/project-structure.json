@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Clock",
+        "path": "./files/projects/clock/"
+    },
+    {
+        "name": "Game Of Life",
+        "path": "./files/projects/game-of-life/"
+    },
+    {
+        "name": "School Project",
+        "path": "./files/projects/js-school-project/"
+    },
+    {
+        "name": "Math Game",
+        "path": "./files/projects/math-game/"
+    },
+    {
+        "name": "Weird Text Generator",
+        "path": "./files/projects/weird-text-generator/"
+    }
+]

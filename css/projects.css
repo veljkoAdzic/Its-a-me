@@ -75,9 +75,16 @@ main {
     scale: 1.05;
 }
 
-#projects:has(a.project:hover) a.project:not(:hover) { /* MAPYBE? */
+/* #projects:has(a.project:hover) a.project:not(:hover) { /* MAPYBE? * /
     filter: blur(3px);
     transition-duration: 3s;
+} */
+
+#projects a.project h2 > span {
+    display: none;
+    font-size: 1.1em;
+    margin-right: 1em;
+    vertical-align: bottom;
 }
 /* ~ */
 
@@ -90,6 +97,14 @@ main {
 
     #projects a.project {
         height: 4em;
+
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+    }
+
+    #projects a.project h2 > span {
+        display: inline;
     }
 
     #projects a.project img {

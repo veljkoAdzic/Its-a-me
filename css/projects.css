@@ -30,6 +30,8 @@ main {
     overflow: hidden;
 
     flex-basis: var(--item-width);
+
+    vertical-align: middle;
 }
 
 @media screen and (max-width: 1400px) { 
@@ -48,6 +50,19 @@ main {
     width: 100%;
     aspect-ratio: 16 / 9;
     display: block;
+
+    transition-duration: 0.3s;
+
+    position: relative;
+}
+
+#projects a.project img::before {
+    content: '';
+    position: absolute;
+
+    inset: 0;
+
+    background-color: var(--white-200);
     background-image: url("../img/background.png");
     background-size: 300%;
 }
@@ -55,12 +70,22 @@ main {
 #projects a.project h2 {
     padding: 0.5em 1em;
 }
+
+#projects a.project:hover {
+    scale: 1.05;
+}
+
+#projects:has(a.project:hover) a.project:not(:hover) { /* MAPYBE? */
+    filter: blur(3px);
+    transition-duration: 3s;
+}
 /* ~ */
 
 /* mobile */
 @media screen and (max-width: 750px) {
     #projects {
         --item-width: 100%;
+        padding-inline: 5vw;
     }
 
     #projects a.project {
@@ -69,6 +94,10 @@ main {
 
     #projects a.project img {
         display: none;
+    }
+
+    #projects:has(a.project:hover) a.project:not(:hover) {
+        filter: none;
     }
 }
 /* ~ */

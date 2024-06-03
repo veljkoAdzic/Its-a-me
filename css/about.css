@@ -8,7 +8,9 @@ a.download-btn {
     border-radius: 0.8rem;
 }
 
-a.download-btn:hover {
+a.download-btn:hover,
+a.download-btn:focus {
+    outline: none;
     background-color: var(--mint-300);
 }
 

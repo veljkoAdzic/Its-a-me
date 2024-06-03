@@ -71,14 +71,11 @@ main {
     padding: 0.5em 1em;
 }
 
-#projects a.project:hover {
+#projects a.project:hover,
+#projects a.project:focus {
+    outline: none;
     scale: 1.05;
 }
-
-/* #projects:has(a.project:hover) a.project:not(:hover) { /* MAPYBE? * /
-    filter: blur(3px);
-    transition-duration: 3s;
-} */
 
 #projects a.project h2 > span {
     display: none;
@@ -109,10 +106,6 @@ main {
 
     #projects a.project img {
         display: none;
-    }
-
-    #projects:has(a.project:hover) a.project:not(:hover) {
-        filter: none;
     }
 }
 /* ~ */

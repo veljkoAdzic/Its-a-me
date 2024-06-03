@@ -19,7 +19,9 @@ main>* {
     width:min-content;
 }
 
-#contact-info a.fa:hover {
+#contact-info a.fa:hover,
+#contact-info a.fa:focus {
+    outline: none;
     color: var(--mint-100);
     scale: 1.25;
 }
@@ -42,6 +44,8 @@ main form {
 
 main form>* {
     width: 70%;
+
+    max-width: 90vw; /* gpt correction */
 }
 
 main form fieldset input[type="text"], main form textarea {
@@ -54,7 +58,6 @@ main form *:focus {
 }
 
 main form fieldset {
-    /* width: 100%; */
     display: flex;
     justify-content: center;
     column-gap: 0.7em;
@@ -64,11 +67,10 @@ main form fieldset {
 
 main form fieldset>input {
     flex-grow: 1;
-    min-width: 3rem;
+    width: 0; /* gpt correction */
 }
 
 main form textarea {
-    width: 50%;
     resize: none;
     
 }
@@ -144,29 +146,31 @@ main form fieldset *, main form textarea{
 /* for mobile */
 @media screen and (max-width: 750px) {
     main>* {
-        width: 100vw;
+        width: 100%;
     }
 
     main form {
         font-size: 1.3rem;
         overflow-x: hidden ;
+        padding-inline: 10%; 
     }
 
     main form h2 {
         font-size: 2em;
+        width: 100%;
     }
 
     main form fieldset {
         font-size: 0.9em;
-        /* width: 60%; */
+        width: 100%;
     }
 
-    /* main form fieldset input {
-        flex-grow: 1;
-        min-width: 3rem;
-    } */
+    main form fieldset > input {
+        flex-shrink: 100;
+       min-width: 0;
+    }
 
     main form textarea {
-        width: 70%;
+        width: 100%;
     }
 }

@@ -16,7 +16,7 @@ const struct = [
         path: "./files/projects/clock/"
     },
     {
-        name: "Игран на живот",
+        name: "Игра на живот",
         path: "./files/projects/game-of-life/"
     },
     {

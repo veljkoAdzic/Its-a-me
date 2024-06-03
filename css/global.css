@@ -57,6 +57,11 @@ a.visible-link {
     color: var(--mint-100);
 }
 
+a.visible-link:focus {
+    color: #AA222B !important;
+    outline: none;
+}
+
 a.visible-link:visited {
     color: var(--gray-green-100);
 }
@@ -125,7 +130,9 @@ a#here {
     background-color: var(--gray-green-100);
 }
 
-nav ul li a:not(#here):hover {
+nav ul li a:not(#here):hover,
+nav ul li a:not(#here):focus {
+    outline: none;
     background-color: var(--mint-100);
 }
 
@@ -144,7 +151,9 @@ nav button {
     color: var(--white-100);
 }
 
-nav button:hover {
+nav button:hover,
+nav button:focus {
+    outline: none;
     cursor: pointer;
     color: white;
     font-size: 3.2rem;
@@ -255,7 +264,9 @@ nav button:hover {
 }
 
 
-.menu-container .side-nav ul li a:not(#here):hover {
+.menu-container .side-nav ul li a:not(#here):hover,
+.menu-container .side-nav ul li a:not(#here):focus {
+    outline: none;
     background-color: var(--mint-100);
 }
 /* ~ */

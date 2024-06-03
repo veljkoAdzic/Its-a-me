@@ -30,6 +30,10 @@ const struct = [
     {
         name: "Генератор на текст",
         path: "./files/projects/weird-text-generator/"
+    },
+    {
+        name: "Игра Змија",
+        path: "./files/projects/snake/"
     }
 ];
 

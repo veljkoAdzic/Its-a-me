@@ -4,7 +4,7 @@ popup.innerHTML = 'Копирано <span class="material-symbols-rounded">inven
 document.body.appendChild(popup);
 
 function copyLink(){
-    const link = window.location.href;
+    let link = window.location.href;
     link = link.slice( 0, link.lastIndexOf("/") );
     navigator.clipboard.writeText(link);
 

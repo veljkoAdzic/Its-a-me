@@ -91,21 +91,5 @@ main {
         --item-width: 100%;
         padding-inline: 5vw;
     }
-
-    #projects a.project {
-        height: 4em;
-
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-    }
-
-    #projects a.project h2 > span {
-        display: inline;
-    }
-
-    #projects a.project img {
-        display: none;
-    }
 }
 /* ~ */

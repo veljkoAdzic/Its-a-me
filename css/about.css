@@ -164,9 +164,23 @@ main article h1 {
 
 /* for mobile */
 @media screen and (max-width: 750px) {
+
+    main article {
+        margin-left: unset;
+    }
+
+    main article h1 {
+        width: 90%;
+        margin-left: 3vw;
+        font-size: 2.2rem;
+        text-indent: 0.75rem;
+    }
+
     #intro {
         flex-direction: column;
-        padding-left: 0;
+        padding: 1.5rem 0;
+        align-items: center;
+        gap: 1.5rem;
     }
 
     #intro p {
@@ -175,12 +189,20 @@ main article h1 {
     
     .timeline {
         max-width: 100%;
-        padding-inline: 4.5rem;
+        padding-inline: 2.5rem;
     }
 
     .timeline::before{
-        left: 1.5rem;
+        left: 0rem;
         background: linear-gradient(180deg, transparent 5%, var(--timeline-color) 10%, var(--timeline-color) 90%, transparent 95%);
+    }
+
+    .timeline-container::before {
+        left: -2.75rem;
+    }
+
+    #skills .container {
+        padding: 2rem 4rem;
     }
 }
 /* ~ */

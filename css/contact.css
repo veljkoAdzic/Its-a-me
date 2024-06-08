@@ -30,6 +30,7 @@ main>* {
 main form {
     background-color: var(--white-100);
     font-size: 1rem;
+    color: var(--gray-100);
 
     padding: 3em 0;
 

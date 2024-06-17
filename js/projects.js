@@ -1,6 +1,6 @@
 /*
 <a class="project" href="#">
-    <img src="./img/background.png" alt=" ">
+    <img src="./img/background.webp" alt=" ">
     <h2>Project Name</h2>
 </a>
 
@@ -41,7 +41,7 @@ const projects = document.querySelector("#projects");
 
 for(item of struct) {
     let img = document.createElement("img");
-    img.src = item.path + "thumbnail.png";
+    img.src = item.path + "thumbnail.webp";
     img.alt = " ";
 
     let title = document.createElement("h2");

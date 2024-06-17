@@ -63,7 +63,7 @@ main {
     inset: 0;
 
     background-color: var(--white-200);
-    background-image: url("../img/background.png");
+    background-image: url("../img/background.webp");
     background-size: 300%;
 }
 
